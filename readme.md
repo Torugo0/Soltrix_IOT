@@ -57,7 +57,7 @@ A proposta visa reduzir riscos de mal súbito por calor extremo, especialmente e
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/seu-usuario/detector-fadiga-termica.git
+git 
 
 # 2. Acesse a pasta
 cd SOLTRIX_IOT
