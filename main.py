@@ -58,7 +58,7 @@ while cap.isOpened():
         if ultima_altura_quadril is not None:
             delta_y = quadril.y - ultima_altura_quadril
             if delta_y > QUEDA_INSTANTANEA_LIMIAR:
-                cv2.putText(frame, "🚨 QUEDA INSTANTÂNEA DETECTADA!", (30, 30),
+                cv2.putText(frame, "QUEDA INSTANTÂNEA DETECTADA!", (30, 30),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2)
                 desmaio_detectado = True
         ultima_altura_quadril = quadril.y
