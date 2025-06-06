@@ -6,8 +6,8 @@ mp_pose = mp.solutions.pose
 pose = mp_pose.Pose()
 mp_drawing = mp.solutions.drawing_utils
 
-LIMIAR_IMOBILIDADE = 7
-AUSENCIA_LIMITE = 7 
+LIMIAR_IMOBILIDADE = 3
+AUSENCIA_LIMITE = 3
 DURACAO_ALERTA_AUSENCIA = 5
 TOLERANCIA_MOVIMENTO = 10
 
