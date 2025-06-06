@@ -34,6 +34,57 @@ A proposta visa reduzir riscos de mal súbito por calor extremo, especialmente e
 
 ---
 
+## 🎯 Atividades Detectadas Pelo Sistema
+
+O sistema detecta e emite alertas para os seguintes comportamentos relacionados à fadiga térmica. Para testá-lo, posicione-se em frente à webcam e simule as seguintes situações:
+
+- 🧍‍♂️ **Cabeça levemente abaixada**  
+  → Incline a cabeça para frente (simulando cansaço ou sono leve).
+
+- ✋ **Mão no rosto**  
+  → Encoste a mão próxima aos olhos ou bochechas (simulando exaustão ou desconforto).
+
+- 🪑 **Postura curvada**  
+  → Sente-se de forma desleixada, com ombros caídos (indicando relaxamento excessivo ou fadiga).
+
+- 🧊 **Imobilidade total por mais de 7 segundos**  
+  → Fique completamente imóvel para simular um possível desmaio.
+
+- 🛌 **Corpo deitado**  
+  → Deite-se no chão ou tente ficar com o corpo inteiro horizontalizado no quadro.
+
+- 🚫 **Ausência no quadro**  
+  → Saia de frente da câmera por mais de 7 segundos para simular uma queda ou abandono de posição.
+
+> ⚠️ Após cada simulação, observe os alertas visuais que aparecem na tela.  
+> O sistema foi projetado para ser sensível, mas não invasivo – alertas desaparecem após o retorno ao estado normal.
+
+---
+
+## ⚠️ Limitações Conhecidas
+
+Embora o sistema funcione de forma eficiente para a detecção de sinais básicos de fadiga térmica, ainda existem limitações técnicas importantes a considerar:
+
+- **Monitora apenas uma pessoa por vez**  
+  A detecção é baseada em um único esqueleto corporal (pose), não sendo compatível com múltiplos usuários simultaneamente.
+
+- **Pode gerar falsos positivos em situações ambíguas**  
+  Como, por exemplo, uma pessoa parada olhando para o lado ou com gestos incomuns que não representem fadiga real.
+
+- **Não realiza análise emocional avançada**  
+  O sistema não detecta expressões faciais complexas como tristeza, angústia ou estresse – apenas sinais físicos como postura, cabeça inclinada e imobilidade.
+
+Esses pontos servem como base para evoluções futuras e integração com tecnologias mais avançadas.
+
+---
+
+## 🎥 Vídeo Demonstrativo
+
+📽️ Assista ao funcionamento da solução na prática:  
+➡️ [Clique aqui para assistir](https://youtu.be/SEU-LINK-AQUI)
+
+---
+
 ### 🧪 Requisitos Básicos
 
 - Uma webcam funcional (embutida ou externa)
@@ -47,12 +98,6 @@ A proposta visa reduzir riscos de mal súbito por calor extremo, especialmente e
 
 - Python 3.10
 - MediaPipe
-
----
-## 🎥 Vídeo Demonstrativo
-
-📽️ Assista ao funcionamento da solução na prática:  
-➡️ [Clique aqui para assistir](https://youtu.be/SEU-LINK-AQUI)
 
 ---
 
@@ -93,24 +138,6 @@ pip install mediapipe opencv-python
 
 - **Calor extremo aumenta mortalidade no Rio de Janeiro, diz pesquisa**  
   CNN Brasil – [https://www.cnnbrasil.com.br/nacional/sudeste/rj/calor-extremo-aumenta-mortalidade-no-rio-de-janeiro-diz-pesquisa](https://www.cnnbrasil.com.br/nacional/sudeste/rj/calor-extremo-aumenta-mortalidade-no-rio-de-janeiro-diz-pesquisa)
-
-
----
-
-## ⚠️ Limitações Conhecidas
-
-Embora o sistema funcione de forma eficiente para a detecção de sinais básicos de fadiga térmica, ainda existem limitações técnicas importantes a considerar:
-
-- **Monitora apenas uma pessoa por vez**  
-  A detecção é baseada em um único esqueleto corporal (pose), não sendo compatível com múltiplos usuários simultaneamente.
-
-- **Pode gerar falsos positivos em situações ambíguas**  
-  Como, por exemplo, uma pessoa parada olhando para o lado ou com gestos incomuns que não representem fadiga real.
-
-- **Não realiza análise emocional avançada**  
-  O sistema não detecta expressões faciais complexas como tristeza, angústia ou estresse – apenas sinais físicos como postura, cabeça inclinada e imobilidade.
-
-Esses pontos servem como base para evoluções futuras e integração com tecnologias mais avançadas.
 
 ---
 
