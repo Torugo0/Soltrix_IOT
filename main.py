@@ -12,7 +12,6 @@ DURACAO_ALERTA_AUSENCIA = 5
 TOLERANCIA_MOVIMENTO = 10
 QUEDA_INSTANTANEA_LIMIAR = 0.15
 
-# Função que avalia movimento entre dois pontos
 def houve_movimento(atual, ultimo, tolerancia=TOLERANCIA_MOVIMENTO):
     if atual is None or ultimo is None:
         return True
@@ -20,7 +19,6 @@ def houve_movimento(atual, ultimo, tolerancia=TOLERANCIA_MOVIMENTO):
     dy = abs(atual.y - ultimo.y)
     return dx > tolerancia / 100 or dy > tolerancia / 100
 
-# Variáveis de controle
 tempo_inicial = None
 tempo_parado = 0
 tempo_ausente = None
@@ -54,7 +52,6 @@ while cap.isOpened():
         olho_esq = landmarks[mp_pose.PoseLandmark.LEFT_EYE]
         olho_dir = landmarks[mp_pose.PoseLandmark.RIGHT_EYE]
 
-        # Verifica queda instantânea com base na queda rápida do quadril
         if ultima_altura_quadril is not None:
             delta_y = quadril.y - ultima_altura_quadril
             if delta_y > QUEDA_INSTANTANEA_LIMIAR:
