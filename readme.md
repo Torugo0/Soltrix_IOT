@@ -16,10 +16,12 @@ A proposta visa reduzir riscos de mal súbito por calor extremo, especialmente e
 
 ### 🧩 Funcionalidades principais:
 
-- ✅ Monitoramento contínuo de expressões faciais e posturas corporais  
-- ✅ Detecção de sinais como: cabeça abaixada, postura curvada e imobilidade  
-- ✅ Geração de alerta automático quando padrões de risco são identificados  
-- ✅ Interface leve, simples, executável localmente sem internet  
+- ✅ Monitoramento contínuo de **gestos e posturas corporais**
+- ✅ Detecção de sinais como: cabeça abaixada, postura curvada, mãos no rosto e imobilidade
+- ✅ Geração de alerta automático quando padrões de risco são identificados
+- ✅ Alerta para ausência de pessoas no ambiente por tempo prolongado
+- ✅ Detecção de possível corpo deitado (queda)
+- ✅ Interface leve e executável localmente, sem necessidade de internet após instalação
 
 ---
 
@@ -35,14 +37,15 @@ A proposta visa reduzir riscos de mal súbito por calor extremo, especialmente e
 ### 🧪 Requisitos Básicos
 
 - Uma webcam funcional (embutida ou externa)
-- Python 3.13.3 instalado
+- Python 3.10 instalado
 - Sistema operacional Windows, Linux ou macOS
+- Conexão com a internet apenas durante a instalação das dependências
 
 ---
 
 ## 🧠 Tecnologias Utilizadas
 
-- Python 3.13.3
+- Python 3.10
 - MediaPipe
 
 ---
@@ -57,10 +60,13 @@ A proposta visa reduzir riscos de mal súbito por calor extremo, especialmente e
 
 ```bash
 # 1. Clone o repositório
-git 
+git clone https://github.com/Torugo0/Soltrix_IOT
 
 # 2. Acesse a pasta
 cd SOLTRIX_IOT
+
+# 3. Instale as dependências necessárias (Verifique se sua versão do python é igual a 3.10 ou inferior para uso do mediapipe)
+pip install mediapipe opencv-python
 
 ```
 ---
@@ -87,6 +93,24 @@ cd SOLTRIX_IOT
 
 - **Calor extremo aumenta mortalidade no Rio de Janeiro, diz pesquisa**  
   CNN Brasil – [https://www.cnnbrasil.com.br/nacional/sudeste/rj/calor-extremo-aumenta-mortalidade-no-rio-de-janeiro-diz-pesquisa](https://www.cnnbrasil.com.br/nacional/sudeste/rj/calor-extremo-aumenta-mortalidade-no-rio-de-janeiro-diz-pesquisa)
+
+
+---
+
+## ⚠️ Limitações Conhecidas
+
+Embora o sistema funcione de forma eficiente para a detecção de sinais básicos de fadiga térmica, ainda existem limitações técnicas importantes a considerar:
+
+- **Monitora apenas uma pessoa por vez**  
+  A detecção é baseada em um único esqueleto corporal (pose), não sendo compatível com múltiplos usuários simultaneamente.
+
+- **Pode gerar falsos positivos em situações ambíguas**  
+  Como, por exemplo, uma pessoa parada olhando para o lado ou com gestos incomuns que não representem fadiga real.
+
+- **Não realiza análise emocional avançada**  
+  O sistema não detecta expressões faciais complexas como tristeza, angústia ou estresse – apenas sinais físicos como postura, cabeça inclinada e imobilidade.
+
+Esses pontos servem como base para evoluções futuras e integração com tecnologias mais avançadas.
 
 ---
 
