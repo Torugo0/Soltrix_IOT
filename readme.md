@@ -81,7 +81,7 @@ Esses pontos servem como base para evoluções futuras e integração com tecnol
 ## 🎥 Vídeo Demonstrativo
 
 📽️ Assista ao funcionamento da solução na prática:  
-➡️ [Clique aqui para assistir](https://youtu.be/SEU-LINK-AQUI)
+➡️ [Clique aqui para assistir]([https://youtu.be/SEU-LINK-AQUI](https://www.youtube.com/watch?v=m4sUIODWykk))
 
 ---
 
