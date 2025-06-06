@@ -87,12 +87,18 @@ while cap.isOpened():
             tempo_parado = 0
             desmaio_detectado = False
 
-        # Pessoa possivelmente deitada
+        # Pessoa possivelmente deitada (queda)
         ys = [lm.y for lm in landmarks]
         altura_pose = max(ys) - min(ys)
         if altura_pose < 0.2:
             cv2.putText(frame, "⚠️ Corpo possivelmente deitado (queda?)", (30, 170),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+            
+            # 🚨 Acionar alerta de desmaio por queda
+            if not desmaio_detectado:
+                cv2.putText(frame, "🚨 POSSÍVEL DESMAIO POR QUEDA! Ligando para emergência...", (30, 200),
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 255), 2)
+                desmaio_detectado = True
 
         tempo_ausente = None
         tempo_alerta = None
@@ -111,7 +117,7 @@ while cap.isOpened():
 
         if alerta_emitido and tempo_alerta is not None:
             if time.time() - tempo_alerta <= DURACAO_ALERTA_AUSENCIA:
-                cv2.putText(frame, "🚨 NENHUM CORPO DETECTADO! Verifique a situação!", (30, 200),
+                cv2.putText(frame, "🚨 NENHUM CORPO DETECTADO! Verifique a situação!", (30, 230),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
             else:
                 alerta_emitido = False
